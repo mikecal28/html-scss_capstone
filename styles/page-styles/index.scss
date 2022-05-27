@@ -4,38 +4,54 @@
   align-items: center;
 }
 
-.hero-wrapper {
-  display: grid;
-  grid-template-rows: 80px 100px;
-  row-gap: 20vh;
-  width: $full-size;
-  height: 92vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/assets/background-images/slider1.jpeg");
-  background-size: cover;
-  background-position: center;
+html {
+  &:not([data-scroll="0"]) {
+    .navbar-wrapper {
+      background-color: white;
+      transform: translateY(-20px);
 
-  .navbar-wrapper {
-    @include flex-default(center);
-    width: $full-size;
-    height: $full-size;
-    // border: 1px solid red;
-    gap: 60%;
-    white-space: nowrap;
-
-    .nav-left {
-      max-width: fit-content;
-      font-size: 18px;
+      a:not(.nav-special) {
+        color: $theme-red;
+      }
     }
+  }
 
-    .nav-right {
-      max-width: fit-content;
-      word-spacing: 20px;
+  .hero-wrapper {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    width: $full-size;
+    height: 92vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("/assets/background-images/slider1.jpeg");
+    background-size: cover;
+    background-position: center;
 
-      .nav-special {
-        background-color: $theme-red;
-        padding: 15px 20px;
-        border-radius: 25px;
+    .navbar-wrapper {
+      position: fixed;
+      overflow: hidden;
+      @include flex-default(space-around);
+      width: $full-size;
+      height: 70px;
+      margin: 20px 0;
+      // border: 1px solid red;
+      gap: 36vw;
+      white-space: nowrap;
+      transition: transform 0.09s;
+
+      .nav-left {
+        max-width: fit-content;
+        font-size: 18px;
+      }
+
+      .nav-right {
+        max-width: fit-content;
+        word-spacing: 20px;
+
+        .nav-special {
+          background-color: $theme-red;
+          padding: 18px 25px;
+          border-radius: 25px;
+        }
       }
     }
   }
@@ -48,6 +64,7 @@
     width: $full-size;
     height: fit-content;
     font-weight: 400;
+    margin-top: 32vh;
 
     h1 {
       color: white;
