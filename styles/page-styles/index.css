@@ -1,0 +1,11 @@
+.hero-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 92vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/background-images/slider1.jpeg");
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=index.css.map */

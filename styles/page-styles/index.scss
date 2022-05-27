@@ -1,0 +1,72 @@
+@mixin flex-default($spacing: space-around) {
+  display: flex;
+  justify-content: $spacing;
+  align-items: center;
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-rows: 80px 100px;
+  row-gap: 20vh;
+  width: $full-size;
+  height: 92vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/assets/background-images/slider1.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  .navbar-wrapper {
+    @include flex-default(center);
+    width: $full-size;
+    height: $full-size;
+    // border: 1px solid red;
+    gap: 60%;
+    white-space: nowrap;
+
+    .nav-left {
+      max-width: fit-content;
+      font-size: 18px;
+    }
+
+    .nav-right {
+      max-width: fit-content;
+      word-spacing: 20px;
+
+      .nav-special {
+        background-color: $theme-red;
+        padding: 15px 20px;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  .hero-body {
+    @include flex-default();
+    flex-direction: column;
+    gap: 40px;
+    // border: 1px solid orange;
+    width: $full-size;
+    height: fit-content;
+    font-weight: 400;
+
+    h1 {
+      color: white;
+      font-size: 67px;
+    }
+
+    p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 18px;
+      color: white;
+    }
+
+    a {
+      @include flex-default();
+      width: 110px;
+      height: 45px;
+      background-color: $theme-red;
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+  }
+}

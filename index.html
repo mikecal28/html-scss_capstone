@@ -1,0 +1,57 @@
+<!-- Replicate the Wordpress Theme linked below
+- I want everything as close to perfect as you can get it.
+- You will need to utilize nearly all of the concepts we've gone over so far.
+- Use SCSS instead of pure css
+  - You can use just one stylesheet to avoid the hassle of the preprocessor if you want.
+- All Pages should should represented if there are links to them.
+- I want to see at least 1 of each of the following:
+ - variable
+ - mixin
+ - flexbox
+ - grid
+ - pseudo selectors (hover and focus are probably the two big ones)
+ - media queries
+ - imported fonts (try to match theirs as best you can if available)
+These will probably come naturally based on that layout anyways. Don't just limit yourself to 1 though, really stretch yourself.
+- I want this to look good on mobile. You do NOT have to have the hamburger icon dropdown menu, come up with a creative solution instead.
+- You should be pushing your code to github as you go along, but you can also submit your live Netlify link to me. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>HTML/SCSS Capstone</title>
+  </head>
+  <body>
+    <div class="hero-wrapper">
+      <div class="navbar-wrapper">
+        <div class="nav-left">
+          <a href="#">Hestia</a>
+        </div>
+        <div class="nav-right">
+          <a href="#">HOME</a>
+          <a href="#">BLOG</a>
+          <a href="#">CONTACT</a>
+          <a class="nav-special" href="#">MORE</a>
+        </div>
+      </div>
+      <div class="hero-body">
+        <h1>Welcome to Hestia!</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <a href="#">SEE MORE</a>
+      </div>
+    </div>
+    <div class="main-content-wrapper"></div>
+    <div class="footer-wrapper"></div>
+  </body>
+</html>
