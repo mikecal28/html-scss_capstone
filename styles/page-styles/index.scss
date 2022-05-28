@@ -11,7 +11,12 @@ html {
       transform: translateY(-20px);
 
       a:not(.nav-special) {
-        color: $theme-red;
+        color: black;
+
+        &:hover {
+          color: $theme-red;
+          background-color: transparent;
+        }
       }
     }
   }
@@ -21,7 +26,7 @@ html {
     grid-template-rows: 100px 100px;
     width: $full-size;
     height: 92vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("/assets/background-images/slider1.jpeg");
     background-size: cover;
     background-position: center;
@@ -29,7 +34,7 @@ html {
     .navbar-wrapper {
       position: fixed;
       overflow: hidden;
-      @include flex-default(space-around);
+      @include flex-default();
       width: $full-size;
       height: 70px;
       margin: 20px 0;
@@ -41,16 +46,40 @@ html {
       .nav-left {
         max-width: fit-content;
         font-size: 18px;
+        margin: 0 10px;
       }
 
       .nav-right {
-        max-width: fit-content;
-        word-spacing: 20px;
+        @include flex-default(center);
+
+        a:not(.nav-special) {
+          @include flex-default(space-around);
+          box-sizing: border-box;
+          flex-basis: 100%;
+          min-width: fit-content;
+          padding: 10px 15px;
+          min-height: 45px;
+          background-image: linear-gradient(
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.08)
+          );
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0% 100%;
+          border-radius: 3px;
+          transition: background-size 0.3s, color 0.4s;
+
+          &:hover {
+            background-size: 90% 100%;
+            opacity: 0.85;
+          }
+        }
 
         .nav-special {
           background-color: $theme-red;
           padding: 18px 25px;
           border-radius: 25px;
+          margin: 0 10px;
         }
       }
     }
@@ -79,7 +108,7 @@ html {
 
     a {
       @include flex-default();
-      width: 110px;
+      width: 120px;
       height: 45px;
       background-color: $theme-red;
       border-radius: 3px;
