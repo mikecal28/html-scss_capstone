@@ -67,11 +67,11 @@ html {
           background-repeat: no-repeat;
           background-size: 0% 100%;
           border-radius: 3px;
-          transition: background-size 0.3s, color 0.4s;
+          transition: background-size 0.3s, color 0.4s ease-in-out;
 
           &:hover {
-            background-size: 90% 100%;
-            opacity: 0.85;
+            background-size: 95% 100%;
+            opacity: 0.8;
           }
         }
 
@@ -114,5 +114,33 @@ html {
       border-radius: 3px;
       margin-top: 20px;
     }
+  }
+}
+
+.main-content-wrapper {
+  box-sizing: border-box;
+  @include flex-default(center);
+  width: 100%;
+  height: 100%;
+
+  .bg-left {
+    flex-shrink: 2;
+    height: 100%;
+    width: 2vw;
+    background-color: red;
+  }
+
+  .bg-middle {
+    margin-top: -60px;
+    height: calc(100% + 60px);
+    width: 96vw;
+    background-color: yellow;
+  }
+
+  .bg-right {
+    flex-shrink: 2;
+    height: 100%;
+    width: 2vw;
+    background-color: red;
   }
 }
