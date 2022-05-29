@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -9,8 +10,8 @@ body {
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   width: 100%;
-  height: 2226.83px;
-  background-image: url("../assets/background-images/contact.jpeg");
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/background-images/contact.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,18 +30,25 @@ html:not([data-scroll="0"]) .navbar-wrapper {
   background-color: white;
   transform: translateY(-20px);
 }
-html:not([data-scroll="0"]) .navbar-wrapper a:not(.nav-special) {
-  color: black;
+html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special) {
+  color: rgb(95, 95, 95);
 }
-html:not([data-scroll="0"]) .navbar-wrapper a:not(.nav-special):hover {
-  color: rgb(231, 37, 101);
+html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special):hover {
+  color: rgba(95, 95, 95, 0.8);
+  background-color: transparent;
+}
+html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
+  color: rgb(85, 85, 85);
+}
+html:not([data-scroll="0"]) .navbar-wrapper .nav-left a:hover {
+  color: rgba(95, 95, 95, 0.8);
   background-color: transparent;
 }
 html .hero-wrapper {
   display: grid;
   grid-template-rows: 100px 100px;
   width: 100%;
-  height: 92vh;
+  height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/background-images/slider1.jpeg");
   background-size: cover;
   background-position: center;
@@ -65,6 +73,12 @@ html .hero-wrapper .navbar-wrapper .nav-left {
   font-size: 18px;
   margin: 0 10px;
 }
+html .hero-wrapper .navbar-wrapper .nav-left a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+}
 html .hero-wrapper .navbar-wrapper .nav-right {
   display: flex;
   justify-content: center;
@@ -86,7 +100,7 @@ html .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special) {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   border-radius: 3px;
-  transition: background-size 0.3s, color 0.4s ease-in-out;
+  transition: background-size 0.3s, color 0.2s ease-in-out;
 }
 html .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special):hover {
   background-size: 95% 100%;
@@ -94,7 +108,7 @@ html .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special):hover {
 }
 html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
   background-color: rgb(231, 37, 101);
-  padding: 18px 25px;
+  padding: 18px 55px 18px 25px;
   border-radius: 25px;
   margin: 0 10px;
 }
@@ -133,27 +147,178 @@ html .hero-body a {
 
 .main-content-wrapper {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  height: auto;
   width: 100%;
-  height: 100%;
 }
 .main-content-wrapper .bg-left {
-  flex-shrink: 2;
-  height: 100%;
-  width: 2vw;
-  background-color: red;
+  background: linear-gradient(to left, rgb(190, 190, 190), rgb(230, 230, 230));
 }
 .main-content-wrapper .bg-middle {
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
   margin-top: -60px;
-  height: calc(100% + 60px);
   width: 96vw;
-  background-color: yellow;
+  background-color: transparent;
+  border-radius: 6px 6px 0 0;
+}
+.main-content-wrapper .bg-middle h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 37px;
+  font-weight: 700;
+  color: rgb(61, 72, 88);
+}
+.main-content-wrapper .bg-middle h2 {
+  color: rgb(61, 72, 88);
+  font-size: 18px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+.main-content-wrapper .bg-middle p {
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(171, 171, 171);
+  line-height: 24px;
+}
+.main-content-wrapper .bg-middle .main-item-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5% 60px 5%;
+  min-height: 450px;
+  width: 100%;
+  gap: 55px;
+  background-color: white;
+  border-radius: 6px 6px 0 0;
+}
+.main-content-wrapper .bg-middle .main-item-header .main-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.main-content-wrapper .bg-middle .main-item-header .main-item-container .sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 33%;
+  max-width: 380px;
+  text-align: center;
+}
+.main-content-wrapper .bg-middle .main-item-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 310px;
+  width: 100%;
+  background-color: transparent;
+  padding: 0 5%;
+}
+.main-content-wrapper .bg-middle .main-item-1 h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.main-content-wrapper .bg-middle .main-item-1 p {
+  color: rgb(254, 254, 254);
+  font-size: 18px;
+  font-weight: 100;
+}
+.main-content-wrapper .bg-middle .main-item-1 div {
+  width: 38%;
+}
+.main-content-wrapper .bg-middle .main-item-1 img {
+  height: auto;
+  width: 42%;
+}
+.main-content-wrapper .bg-middle .main-item-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px 0 60px 0;
+  min-height: 490px;
+  width: 100%;
+  gap: 80px;
+  background-color: white;
+}
+.main-content-wrapper .bg-middle .main-item-2 h1 {
+  text-align: center;
+}
+.main-content-wrapper .bg-middle .main-item-2 .sub-heading {
+  color: rgb(61, 72, 88);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: left;
+  align-items: baseline;
+  margin: 0 10vw;
+  gap: 2vw;
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-1,
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-2,
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-basis: 390px;
+  min-width: 150px;
+  text-align: left;
+  gap: 12px;
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-1 a:not(.sub-heading),
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-2 a:not(.sub-heading),
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-3 a:not(.sub-heading) {
+  font-size: 12px;
+  font-weight: 500;
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-1 a:not(.sub-heading) {
+  color: rgb(136, 41, 153);
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-2 a:not(.sub-heading) {
+  color: rgb(31, 188, 211);
+}
+.main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-3 a:not(.sub-heading) {
+  color: rgb(242, 69, 61);
+}
+.main-content-wrapper .bg-middle .main-item-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 120px;
+  min-height: 440px;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+}
+.main-content-wrapper .bg-middle .main-item-3 h1 {
+  color: white;
+  margin-bottom: 30px;
+}
+.main-content-wrapper .bg-middle .main-item-3 h2 {
+  color: white;
+}
+.main-content-wrapper .bg-middle .main-item-3 p {
+  margin-left: 30px;
+}
+.main-content-wrapper .bg-middle .main-item-3 i {
+  font-size: 35px;
+}
+.main-content-wrapper .bg-middle .main-item-footer {
+  min-height: 100px;
+  width: 100%;
+  background-color: rgb(50, 52, 55);
 }
 .main-content-wrapper .bg-right {
-  flex-shrink: 2;
-  height: 100%;
-  width: 2vw;
-  background-color: red;
+  background: linear-gradient(to right, rgb(190, 190, 190), rgb(230, 230, 230));
 }/*# sourceMappingURL=main.css.map */
