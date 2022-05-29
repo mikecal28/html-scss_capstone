@@ -1,0 +1,120 @@
+@media (max-width: 550px) {
+    .main-content-wrapper {
+        .bg-left {
+            width: 0;
+        }
+
+        .bg-right {
+            width: 0;
+        }
+
+        .bg-middle {
+            width: 100vw;
+            
+            .main-item-header {
+                .main-item-container {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 50px;
+
+                    .sub-container {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            .main-item-1 {
+                flex-direction: column;
+
+                div {
+                    width: 90%;
+                }
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .main-item-2 {
+
+                .main-item-container {
+                    grid-template-columns: 1fr;
+                    gap: 120px;
+                    margin: 0 8vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 555px) {
+    html, html:not([data-scroll="0"]) {
+          .navbar-wrapper {
+            background-color: white;
+            transform: translateY(-20px);
+            transition: transform 0s;
+
+            .nav-left {
+                color: $theme-pink;
+
+                a {
+                    pointer-events: all;
+                }
+            }
+      
+            .nav-right {
+                .nav-special {
+                    background-color: white;
+                    color: $theme-red;
+                }
+
+                a:not(.nav-special) {
+                    color: white;
+                    pointer-events: none;
+      
+                    &:hover {
+                        color: rgba(95, 95, 95, 0.8);
+                        background-color: transparent;
+                        cursor: default;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-wrapper {
+        .navbar-wrapper {
+            background-color: white;
+            transform: translateY(-20px);
+
+            .nav-right {
+                .nav-special {
+                    background-color: white;
+                    color: $theme-red;
+                }
+
+                a {
+                    background-color: white;
+                }
+
+                a:not(.nav-special) {
+                    pointer-events: none;
+                    &:hover {
+                        pointer-events: none;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+
+    html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
+        background-color: white;
+    }
+
+    html .hero-wrapper .navbar-wrapper .nav-left a {
+        color: $theme-pink;
+        pointer-events: all;
+    }
+}

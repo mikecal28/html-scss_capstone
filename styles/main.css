@@ -124,6 +124,7 @@ html .hero-body {
   height: fit-content;
   font-weight: 400;
   margin-top: 32vh;
+  text-align: center;
 }
 html .hero-body h1 {
   color: white;
@@ -321,4 +322,93 @@ html .hero-body a {
 }
 .main-content-wrapper .bg-right {
   background: linear-gradient(to right, rgb(190, 190, 190), rgb(230, 230, 230));
+}
+
+@media (max-width: 550px) {
+  .main-content-wrapper .bg-left {
+    width: 0;
+  }
+  .main-content-wrapper .bg-right {
+    width: 0;
+  }
+  .main-content-wrapper .bg-middle {
+    width: 100vw;
+  }
+  .main-content-wrapper .bg-middle .main-item-header .main-item-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .main-content-wrapper .bg-middle .main-item-header .main-item-container .sub-container {
+    width: 100%;
+  }
+  .main-content-wrapper .bg-middle .main-item-1 {
+    flex-direction: column;
+  }
+  .main-content-wrapper .bg-middle .main-item-1 div {
+    width: 90%;
+  }
+  .main-content-wrapper .bg-middle .main-item-1 img {
+    width: 90%;
+  }
+  .main-content-wrapper .bg-middle .main-item-2 .main-item-container {
+    grid-template-columns: 1fr;
+    gap: 120px;
+    margin: 0 8vw;
+  }
+}
+@media (max-width: 555px) {
+  html .navbar-wrapper, html:not([data-scroll="0"]) .navbar-wrapper {
+    background-color: white;
+    transform: translateY(-20px);
+    transition: transform 0s;
+  }
+  html .navbar-wrapper .nav-left, html:not([data-scroll="0"]) .navbar-wrapper .nav-left {
+    color: rgb(171, 171, 171);
+  }
+  html .navbar-wrapper .nav-left a, html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
+    pointer-events: all;
+  }
+  html .navbar-wrapper .nav-right .nav-special, html:not([data-scroll="0"]) .navbar-wrapper .nav-right .nav-special {
+    background-color: white;
+    color: rgb(231, 37, 101);
+  }
+  html .navbar-wrapper .nav-right a:not(.nav-special), html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special) {
+    color: white;
+    pointer-events: none;
+  }
+  html .navbar-wrapper .nav-right a:not(.nav-special):hover, html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special):hover {
+    color: rgba(95, 95, 95, 0.8);
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .hero-wrapper .navbar-wrapper {
+    background-color: white;
+    transform: translateY(-20px);
+  }
+  .hero-wrapper .navbar-wrapper .nav-right .nav-special {
+    background-color: white;
+    color: rgb(231, 37, 101);
+  }
+  .hero-wrapper .navbar-wrapper .nav-right a {
+    background-color: white;
+  }
+  .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special) {
+    pointer-events: none;
+  }
+  .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special):hover {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
+    background-color: white;
+  }
+
+  html .hero-wrapper .navbar-wrapper .nav-left a {
+    color: rgb(171, 171, 171);
+    pointer-events: all;
+  }
 }/*# sourceMappingURL=main.css.map */
