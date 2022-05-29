@@ -1,4 +1,4 @@
-@media (max-width: 550px) {
+@media (max-width: 768px) {
     .main-content-wrapper {
         .bg-left {
             width: 0;
@@ -12,6 +12,7 @@
             width: 100vw;
             
             .main-item-header {
+
                 .main-item-container {
                     flex-direction: column;
                     align-items: center;
@@ -47,7 +48,7 @@
     }
 }
 
-@media (max-width: 555px) {
+@media (max-width: 768px) {
     html, html:not([data-scroll="0"]) {
           .navbar-wrapper {
             background-color: white;
@@ -116,5 +117,17 @@
     html .hero-wrapper .navbar-wrapper .nav-left a {
         color: $theme-pink;
         pointer-events: all;
+    }
+
+    html .hero-wrapper {
+        height: calc(100vh + 60px);
+    }
+
+    .main-content-wrapper .bg-middle .main-item-header {
+        border-radius: 0 0 0 0;
+    }
+
+    .main-content-wrapper .bg-middle {
+        border-radius: 0 0 0 0;
     }
 }

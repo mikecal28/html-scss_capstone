@@ -324,7 +324,7 @@ html .hero-body a {
   background: linear-gradient(to right, rgb(190, 190, 190), rgb(230, 230, 230));
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .main-content-wrapper .bg-left {
     width: 0;
   }
@@ -357,7 +357,7 @@ html .hero-body a {
     margin: 0 8vw;
   }
 }
-@media (max-width: 555px) {
+@media (max-width: 768px) {
   html .navbar-wrapper, html:not([data-scroll="0"]) .navbar-wrapper {
     background-color: white;
     transform: translateY(-20px);
@@ -410,5 +410,17 @@ html .hero-body a {
   html .hero-wrapper .navbar-wrapper .nav-left a {
     color: rgb(171, 171, 171);
     pointer-events: all;
+  }
+
+  html .hero-wrapper {
+    height: calc(100vh + 60px);
+  }
+
+  .main-content-wrapper .bg-middle .main-item-header {
+    border-radius: 0 0 0 0;
+  }
+
+  .main-content-wrapper .bg-middle {
+    border-radius: 0 0 0 0;
   }
 }/*# sourceMappingURL=main.css.map */
