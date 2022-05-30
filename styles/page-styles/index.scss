@@ -99,9 +99,15 @@ html {
           padding: 18px 55px 18px 25px;
           border-radius: 25px;
           margin: 0 10px;
+          box-shadow: 0 6px 6px -6px gray;
+
+          &:hover {
+            box-shadow: 0 12px 12px -8px gray;
+            color: lightgray;
+          }
         }
 
-        i {
+        .hamburger-icon {
           display: none;
         }
       }
@@ -343,9 +349,28 @@ html {
     }
 
     .main-item-footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       min-height: 100px;
       width: 100%;
       background-color: $theme-footer-color;
+      gap: 30vw;
+
+      p {
+        color: lightgray;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 10vw;
+        font-size: 12px;
+        font-weight: 100;
+        gap: 50px;
+        white-space: nowrap;
+      }
     }
   }
 
@@ -358,6 +383,6 @@ html {
   }
 }
 
-.hamburger-icon {
+.hamburger-menu {
   display: none;
 }

@@ -111,8 +111,13 @@ html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
   padding: 18px 55px 18px 25px;
   border-radius: 25px;
   margin: 0 10px;
+  box-shadow: 0 6px 6px -6px gray;
 }
-html .hero-wrapper .navbar-wrapper .nav-right i {
+html .hero-wrapper .navbar-wrapper .nav-right .nav-special:hover {
+  box-shadow: 0 12px 12px -8px gray;
+  color: lightgray;
+}
+html .hero-wrapper .navbar-wrapper .nav-right .hamburger-icon {
   display: none;
 }
 html .hero-body {
@@ -319,15 +324,32 @@ html .hero-body a {
   font-size: 35px;
 }
 .main-content-wrapper .bg-middle .main-item-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   min-height: 100px;
   width: 100%;
   background-color: rgb(50, 52, 55);
+  gap: 30vw;
+}
+.main-content-wrapper .bg-middle .main-item-footer p {
+  color: lightgray;
+}
+.main-content-wrapper .bg-middle .main-item-footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 10vw;
+  font-size: 12px;
+  font-weight: 100;
+  gap: 50px;
+  white-space: nowrap;
 }
 .main-content-wrapper .bg-right {
   background: linear-gradient(to right, rgb(190, 190, 190), rgb(230, 230, 230));
 }
 
-.hamburger-icon {
+.hamburger-menu {
   display: none;
 }
 
@@ -368,12 +390,13 @@ html .hero-body a {
   html .navbar-wrapper,
 html:not([data-scroll="0"]) .navbar-wrapper {
     background-color: white;
+    box-shadow: 0 6px 6px -6px gray;
     transform: translateY(-20px);
     transition: transform 0s;
   }
   html .navbar-wrapper .nav-left,
 html:not([data-scroll="0"]) .navbar-wrapper .nav-left {
-    color: rgb(171, 171, 171);
+    color: rgb(231, 37, 101);
   }
   html .navbar-wrapper .nav-left a,
 html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
@@ -390,12 +413,27 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
   }
 
   html .hero-wrapper .navbar-wrapper .nav-left a {
-    color: rgb(171, 171, 171);
+    color: rgb(231, 37, 101);
     pointer-events: all;
+    margin-left: -5vw;
+  }
+
+  html .hero-wrapper .navbar-wrapper .nav-left a:hover {
+    color: rgb(171, 171, 171);
+  }
+
+  html .hero-wrapper .navbar-wrapper .nav-left {
+    position: absolute;
+    transform: translateX(-40vw);
+    z-index: 2;
+    color: rgb(231, 37, 101);
   }
 
   html .hero-wrapper {
     height: calc(100vh + 60px);
+  }
+  html .hero-wrapper h1 {
+    font-size: 40px;
   }
 
   .main-content-wrapper .bg-middle .main-item-header {
@@ -414,12 +452,94 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
     display: none;
   }
 
-  .hamburger-icon {
-    display: block;
+  .hamburger-menu {
+    color: rgb(231, 37, 101);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    background-color: white;
+    background-size: 100% 100%;
+    top: 30px;
+    max-height: 40px;
+    width: 100vw;
+    transition: max-height 0.5s;
+    white-space: normal;
+    box-shadow: 0 6px 6px -6px gray;
   }
-  .hamburger-icon:focus, .hamburger-icon:active {
-    background-color: black;
-    height: 2000px;
-    width: 500px;
+  .hamburger-menu .hamburger-menu-content {
+    overflow: hidden;
+    justify-self: center;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100vw;
+    height: 260px;
+  }
+  .hamburger-menu .hamburger-menu-content a,
+.hamburger-menu .hamburger-menu-content .nav-special {
+    color: black;
+  }
+  .hamburger-menu .fa-bars {
+    transform: translateY(-20px);
+    display: block;
+    font-size: 25px;
+    margin: 10px 20px 10px 10px;
+  }
+  .hamburger-menu .fa-bars:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .hamburger-menu .fa-xmark {
+    display: none;
+  }
+  .hamburger-menu:focus, .hamburger-menu:active {
+    max-height: 260px;
+  }
+  .hamburger-menu:focus .fa-bars, .hamburger-menu:active .fa-bars {
+    display: none;
+  }
+  .hamburger-menu:focus .fa-xmark, .hamburger-menu:active .fa-xmark {
+    transform: translateY(-20px);
+    display: block;
+    font-size: 30px;
+    margin: 10px 20px 5px 5px;
+  }
+  .hamburger-menu:focus .fa-xmark:hover, .hamburger-menu:active .fa-xmark:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .hamburger-menu .hamburger-menu-content .nav-special {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    background-color: rgb(231, 37, 101);
+    width: 95vw;
+    height: 40px;
+    border-radius: 25px;
+    margin: 0px 2.5vw 0px 2.5vw;
+    color: white;
+    box-shadow: 0 6px 6px -6px gray;
+  }
+
+  .hamburger-menu .hamburger-menu-content .nav-special:hover {
+    box-shadow: 0 8px 10px -10px gray;
+    color: lightgray;
+  }
+
+  .hamburger-menu .hamburger-menu-content a:not(.nav-special) {
+    margin-left: 30px;
+    color: rgb(231, 37, 101);
+  }
+
+  .hamburger-menu .hamburger-menu-content a:not(.nav-special):hover {
+    color: rgb(171, 171, 171);
   }
 }/*# sourceMappingURL=main.css.map */
