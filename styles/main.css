@@ -55,7 +55,7 @@ html .hero-wrapper {
 }
 html .hero-wrapper .navbar-wrapper {
   position: fixed;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -111,6 +111,9 @@ html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
   padding: 18px 55px 18px 25px;
   border-radius: 25px;
   margin: 0 10px;
+}
+html .hero-wrapper .navbar-wrapper .nav-right i {
+  display: none;
 }
 html .hero-body {
   display: flex;
@@ -324,6 +327,10 @@ html .hero-body a {
   background: linear-gradient(to right, rgb(190, 190, 190), rgb(230, 230, 230));
 }
 
+.hamburger-icon {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .main-content-wrapper .bg-left {
     width: 0;
@@ -358,49 +365,24 @@ html .hero-body a {
   }
 }
 @media (max-width: 768px) {
-  html .navbar-wrapper, html:not([data-scroll="0"]) .navbar-wrapper {
+  html .navbar-wrapper,
+html:not([data-scroll="0"]) .navbar-wrapper {
     background-color: white;
     transform: translateY(-20px);
     transition: transform 0s;
   }
-  html .navbar-wrapper .nav-left, html:not([data-scroll="0"]) .navbar-wrapper .nav-left {
+  html .navbar-wrapper .nav-left,
+html:not([data-scroll="0"]) .navbar-wrapper .nav-left {
     color: rgb(171, 171, 171);
   }
-  html .navbar-wrapper .nav-left a, html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
+  html .navbar-wrapper .nav-left a,
+html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
     pointer-events: all;
-  }
-  html .navbar-wrapper .nav-right .nav-special, html:not([data-scroll="0"]) .navbar-wrapper .nav-right .nav-special {
-    background-color: white;
-    color: rgb(231, 37, 101);
-  }
-  html .navbar-wrapper .nav-right a:not(.nav-special), html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special) {
-    color: white;
-    pointer-events: none;
-  }
-  html .navbar-wrapper .nav-right a:not(.nav-special):hover, html:not([data-scroll="0"]) .navbar-wrapper .nav-right a:not(.nav-special):hover {
-    color: rgba(95, 95, 95, 0.8);
-    background-color: transparent;
-    cursor: default;
-    pointer-events: none;
   }
 
   .hero-wrapper .navbar-wrapper {
     background-color: white;
     transform: translateY(-20px);
-  }
-  .hero-wrapper .navbar-wrapper .nav-right .nav-special {
-    background-color: white;
-    color: rgb(231, 37, 101);
-  }
-  .hero-wrapper .navbar-wrapper .nav-right a {
-    background-color: white;
-  }
-  .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special) {
-    pointer-events: none;
-  }
-  .hero-wrapper .navbar-wrapper .nav-right a:not(.nav-special):hover {
-    pointer-events: none;
-    cursor: default;
   }
 
   html .hero-wrapper .navbar-wrapper .nav-right .nav-special {
@@ -422,5 +404,22 @@ html .hero-body a {
 
   .main-content-wrapper .bg-middle {
     border-radius: 0 0 0 0;
+  }
+
+  html .hero-wrapper .navbar-wrapper {
+    gap: 20vw;
+  }
+
+  html .hero-wrapper .navbar-wrapper .nav-right {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+  .hamburger-icon:focus, .hamburger-icon:active {
+    background-color: black;
+    height: 2000px;
+    width: 500px;
   }
 }/*# sourceMappingURL=main.css.map */
