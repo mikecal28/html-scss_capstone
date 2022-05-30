@@ -382,6 +382,10 @@ html .hero-body a {
   .main-content-wrapper .bg-middle .main-item-1 img {
     width: 80%;
   }
+  .main-content-wrapper .bg-middle .main-item-2 h1 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
   .main-content-wrapper .bg-middle .main-item-2 .main-item-container {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -450,6 +454,10 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
 
   .main-content-wrapper .bg-middle .main-item-header {
     border-radius: 0 0 0 0;
+    padding-top: 40px;
+  }
+  .main-content-wrapper .bg-middle .main-item-header h1 {
+    font-size: 30px;
   }
 
   .main-content-wrapper .bg-middle {
