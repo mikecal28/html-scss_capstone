@@ -354,6 +354,9 @@ html .hero-body a {
 }
 
 @media (max-width: 768px) {
+  .main-content-wrapper {
+    overflow-x: hidden;
+  }
   .main-content-wrapper .bg-left {
     width: 0;
   }
@@ -412,7 +415,7 @@ html:not([data-scroll="0"]) .navbar-wrapper {
   }
   html .navbar-wrapper .nav-left,
 html:not([data-scroll="0"]) .navbar-wrapper .nav-left {
-    color: rgb(231, 37, 101);
+    color: rgb(85, 85, 85);
   }
   html .navbar-wrapper .nav-left a,
 html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
@@ -442,11 +445,11 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
     position: absolute;
     transform: translateX(-40vw);
     z-index: 2;
-    color: rgb(231, 37, 101);
+    color: rgb(85, 85, 85);
   }
 
   html .hero-wrapper {
-    height: calc(100vh + 60px);
+    height: 100vh;
   }
   html .hero-wrapper h1 {
     font-size: 40px;
@@ -454,7 +457,7 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
 
   .main-content-wrapper .bg-middle .main-item-header {
     border-radius: 0 0 0 0;
-    padding-top: 40px;
+    padding-top: 90px;
   }
   .main-content-wrapper .bg-middle .main-item-header h1 {
     font-size: 30px;

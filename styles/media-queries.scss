@@ -1,5 +1,7 @@
 @media (max-width: 768px) {
   .main-content-wrapper {
+    overflow-x: hidden;
+
     .bg-left {
       width: 0;
     }
@@ -77,7 +79,7 @@
       transition: transform 0s;
 
       .nav-left {
-        color: $theme-red;
+        color: $theme-link-color-1;
 
         a {
           pointer-events: all;
@@ -111,11 +113,11 @@
     position: absolute;
     transform: translateX(-40vw);
     z-index: 2;
-    color: $theme-red;
+    color: $theme-link-color-1;
   }
 
   html .hero-wrapper {
-    height: calc(100vh + 60px);
+    height: 100vh;
 
     h1 {
       font-size: 40px;
@@ -124,7 +126,7 @@
 
   .main-content-wrapper .bg-middle .main-item-header {
     border-radius: 0 0 0 0;
-    padding-top: 40px;
+    padding-top: 90px;
 
     h1 {
       font-size: 30px;
