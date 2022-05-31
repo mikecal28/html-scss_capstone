@@ -26,3 +26,319 @@ a {
   font-weight: 300;
   transition: color 0.3s;
 }
+
+@mixin flex-default($spacing: space-around) {
+  display: flex;
+  justify-content: $spacing;
+  align-items: center;
+}
+
+html {
+  &:not([data-scroll="0"]) {
+    .navbar-wrapper {
+      background-color: white;
+      transform: translateY(-20px);
+      box-shadow: 0 6px 6px -6px gray;
+
+      .nav-right {
+        a:not(.nav-special) {
+          color: $theme-link-color-2;
+
+          &:hover {
+            color: rgba(95, 95, 95, 0.8);
+            background-color: transparent;
+          }
+        }
+      }
+
+      .nav-left {
+        a {
+          color: $theme-link-color-1;
+
+          &:hover {
+            color: rgba(95, 95, 95, 0.8);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-wrapper {
+    display: grid;
+    grid-template-rows: 100px 100px;
+    width: 100%;
+
+    .navbar-wrapper {
+      position: fixed;
+      overflow: visible;
+      @include flex-default();
+      width: 100%;
+      height: 70px;
+      margin: 20px 0;
+      // border: 1px solid red;
+      gap: 36vw;
+      white-space: nowrap;
+      transition: transform 0.09s;
+
+      .nav-left {
+        max-width: fit-content;
+        font-size: 18px;
+        margin: 0 10px;
+
+        a {
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          text-decoration-style: none;
+        }
+      }
+
+      .nav-right {
+        @include flex-default(center);
+
+        a:not(.nav-special) {
+          @include flex-default(space-around);
+          box-sizing: border-box;
+          flex-basis: 100%;
+          min-width: fit-content;
+          padding: 10px 15px;
+          min-height: 45px;
+          background-image: linear-gradient(
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.08)
+          );
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: 0% 100%;
+          border-radius: 3px;
+          transition: background-size 0.3s, color 0.2s ease-in-out;
+
+          &:hover {
+            background-size: 95% 100%;
+            opacity: 0.8;
+          }
+        }
+
+        .nav-special {
+          background-color: $theme-red;
+          padding: 18px 55px 18px 25px;
+          border-radius: 25px;
+          margin: 0 10px;
+          box-shadow: 0 6px 6px -6px gray;
+
+          &:hover {
+            box-shadow: 0 12px 12px -8px gray;
+            color: lightgray;
+          }
+        }
+
+        .hamburger-icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hero-body {
+    @include flex-default();
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    p {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 18px;
+      color: white;
+    }
+
+    a {
+      @include flex-default();
+      width: 120px;
+      height: 45px;
+      background-color: $theme-red;
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.main-content-wrapper {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  height: auto;
+  width: 100%;
+
+  .bg-left {
+    background: linear-gradient(
+      to left,
+      rgba(190, 190, 190),
+      rgba(230, 230, 230)
+    );
+  }
+
+  .bg-middle {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    margin-top: -60px;
+    width: 96vw;
+    background-color: transparent;
+    border-radius: 6px 6px 0 0;
+
+    h1 {
+      font-family: "Roboto Slab", serif;
+      font-size: 37px;
+      font-weight: 700;
+      color: $theme-dark-red;
+    }
+
+    h2 {
+      color: $theme-dark-red;
+      font-size: 18px;
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      color: $theme-pink;
+      line-height: 24px;
+    }
+
+    .main-item-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      padding: 20px 0 60px 0;
+      min-height: 490px;
+      width: 100%;
+      gap: 80px;
+      background-color: white;
+
+      h1 {
+        text-align: center;
+      }
+
+      .sub-heading {
+        color: $theme-dark-red;
+        font-weight: 700;
+        font-family: "Roboto Slab", serif;
+      }
+
+      .main-item-container {
+        display: grid;
+        justify-items: left;
+        align-items: baseline;
+        gap: 2vw;
+
+        .sub-container-1,
+        .sub-container-2,
+        .sub-container-3,
+        .sub-container-4,
+        .sub-container-5,
+        .sub-container-6,
+        .sub-container-7 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex-basis: 390px;
+          max-width: 700px;
+          min-width: 150px;
+          text-align: left;
+          gap: 12px;
+
+          a:not(.sub-heading) {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+
+        .sub-container-1 {
+          .sub-container-footer {
+            font-size: 14px;
+            font-weight: 100;
+            color: black;
+            a {
+              font-size: 14px;
+              color: black !important;
+            }
+          }
+          a:not(.sub-heading) {
+            color: $theme-color-1;
+          }
+        }
+
+        .sub-container-2 {
+          .sub-container-footer {
+            font-size: 14px;
+            font-weight: 100;
+            color: black;
+            a {
+              font-size: 14px;
+              color: black !important;
+            }
+          }
+          a:not(.sub-heading) {
+            color: $theme-color-2;
+          }
+        }
+
+        .sub-container-3 {
+          .sub-container-footer {
+            font-size: 14px;
+            font-weight: 100;
+            color: black;
+            a {
+              font-size: 14px;
+              color: black !important;
+            }
+          }
+          a:not(.sub-heading) {
+            color: $theme-color-3;
+          }
+        }
+      }
+    }
+
+    .main-item-footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 100px;
+      width: 100%;
+      background-color: $theme-footer-color;
+      gap: 30vw;
+
+      p {
+        color: lightgray;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 10vw;
+        font-size: 12px;
+        font-weight: 100;
+        gap: 50px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .bg-right {
+    background: linear-gradient(
+      to right,
+      rgba(190, 190, 190),
+      rgba(230, 230, 230)
+    );
+  }
+}
+
+.hamburger-menu {
+  display: none;
+}

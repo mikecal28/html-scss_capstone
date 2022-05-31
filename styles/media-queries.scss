@@ -45,7 +45,7 @@
           margin-top: 40px;
         }
 
-        .main-item-container {
+        .index-main-item-container {
           grid-template-columns: 1fr;
           justify-items: center;
           gap: 120px;
@@ -56,6 +56,20 @@
           .sub-container-3 {
             align-items: center;
             text-align: center;
+          }
+        }
+
+        .blog-main-item-container {
+          grid-template-columns: 1fr;
+          justify-items: left;
+          gap: 120px;
+          margin: 80px 4vw;
+
+          .sub-container-1,
+          .sub-container-2,
+          .sub-container-3 {
+            align-items: left;
+            text-align: left;
           }
         }
       }
@@ -116,11 +130,20 @@
     color: $theme-link-color-1;
   }
 
-  html .hero-wrapper {
+  html .index-hero-wrapper {
     height: 100vh;
 
     h1 {
       font-size: 40px;
+    }
+  }
+
+  html .blog-hero-wrapper {
+    height: 25vh;
+
+    h1 {
+      margin-top: 20vh !important;
+      font-size: 25px !important;
     }
   }
 
