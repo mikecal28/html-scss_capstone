@@ -7,6 +7,8 @@
 
   .contact-navbar-wrapper {
     top: 0 !important;
+    z-index: 5;
+    background-color: white !important;
   }
 
   .contact-hero-body {
@@ -18,8 +20,8 @@
   }
 }
 
-.main-content-wrapper {
-  overflow-x: hidden;
+.contact-main-content-wrapper {
+  overflow: hidden;
   .contact-bg-left {
     display: none;
   }
@@ -28,25 +30,38 @@
     margin: -3px 0 0 0;
     border-radius: 0;
     width: 100vw;
+    justify-content: center;
 
     .contact-main-item-3 {
+      overflow: hidden;
       color: black;
       font-size: 14px;
-      padding: 90px 0;
+      padding: 90px 30vw 0 20vw;
+      width: 100%;
+      min-height: 700px;
+      max-height: 700px;
+      height: fit-content;
+      justify-content: center;
+      position: relative;
+      top: 30px;
+      padding-bottom: 22.5%;
       display: grid !important;
+      margin-right: 10vw;
       grid-template-areas:
         "a a c"
         "a a d"
         "a a e";
-      gap: 30px;
-      margin: 0;
       h1 {
         color: black;
+        margin-bottom: 50px;
+        margin-top: -50px;
       }
       h2 {
         color: black;
         font-size: 18px;
         margin-bottom: 15px;
+        margin-right: 2vw;
+        margin-left: -2vw;
         i {
           font-size: 24px;
           color: $theme-red;
@@ -54,16 +69,37 @@
       }
 
       .item-1 {
+        min-width: 200px;
         grid-area: c;
-        margin-left: 2vw;
+        white-space: nowrap;
+        margin-left: 50px;
+        padding-bottom: 50px;
+
+        p {
+          margin-left: -2vw;
+        }
       }
       .item-2 {
+        min-width: 200px;
         grid-area: d;
-        margin-left: 2vw;
+        white-space: nowrap;
+        margin-left: 50px;
+        padding-bottom: 50px;
+
+        p {
+          margin-left: -2vw;
+        }
       }
       .item-3 {
+        min-width: 200px;
         grid-area: e;
-        margin-left: 2vw;
+        white-space: nowrap;
+        margin-left: 50px;
+        padding-bottom: 25vh;
+
+        p {
+          margin-left: -2vw;
+        }
       }
 
       form {
@@ -74,12 +110,25 @@
         grid-area: a;
         white-space: nowrap;
         width: 40vw;
+        min-width: fit-content;
+        max-width: 700px;
+        margin-right: 2vw;
+        margin-left: 5vw;
 
         div {
           height: fit-content;
-          margin: -20px 0;
+          margin: -15px 0;
+        }
+
+        button {
+          border-radius: 3px;
+          font-size: 12px;
         }
       }
+    }
+
+    .contact-main-item-footer {
+      width: 100vw;
     }
   }
 

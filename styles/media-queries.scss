@@ -284,4 +284,71 @@
   .hamburger-menu .hamburger-menu-content a:not(.nav-special):hover {
     color: $theme-pink;
   }
+
+  .main-content-wrapper .bg-middle .main-item-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    div {
+      justify-content: space-between;
+      width: 150px;
+      gap: 0;
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+
+  .contact-main-content-wrapper {
+    .contact-bg-middle {
+      justify-content: center;
+      width: 100vw;
+      .contact-main-item-3 {
+        max-height: none;
+        justify-content: center;
+        width: 90vw;
+        margin: 0;
+        padding: 0 0 0 0;
+        grid-template-areas:
+          "a a"
+          "a a"
+          "a a"
+          "c c"
+          "d d"
+          "e e";
+
+        h1 {
+          margin: 40px 0 60px 0;
+          padding: 0 0 0 0;
+        }
+
+        .item-1 {
+          margin: 0 0 50px 2vw;
+          padding: 0 0 0 10vw;
+        }
+
+        .item-2 {
+          margin: 0 0 50px 2vw;
+          padding: 0 0 0 10vw;
+        }
+
+        .item-3 {
+          margin: 0 0 200px 2vw;
+          padding: 0 0 0 10vw;
+        }
+
+        form {
+          margin: 0 0 0 2vw;
+          padding: 0 0 50px 10vw;
+        }
+      }
+    }
+  }
+
+  textarea,
+  .name {
+    width: 90vw;
+  }
 }

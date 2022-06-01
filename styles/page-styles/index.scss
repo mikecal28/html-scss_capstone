@@ -427,7 +427,11 @@
 }
 
 .main-content-wrapper {
-  .bg-middle {
+  .index-bg-middle {
+    overflow-y: visible;
+    margin-top: -60px;
+    height: calc(100% + 60px);
+
     .main-item-header {
       display: flex;
       flex-direction: column;
