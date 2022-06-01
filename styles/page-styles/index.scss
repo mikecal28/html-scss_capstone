@@ -397,6 +397,15 @@
 //   display: none;
 // }
 
+.index-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/background-images/contact.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
 .index-hero-wrapper {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/assets/background-images/slider1.jpeg");
@@ -509,7 +518,7 @@
         color: white;
       }
 
-      p {
+      .info {
         margin-left: 30px;
       }
 

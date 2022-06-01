@@ -1,0 +1,35 @@
+.contact-hero-wrapper {
+  display: block !important;
+}
+.contact-hero-wrapper .google-maps {
+  margin-top: 70px;
+}
+.contact-hero-wrapper .contact-navbar-wrapper {
+  top: 0 !important;
+}
+.contact-hero-wrapper .contact-hero-body h1 {
+  color: white;
+  font-size: 42px;
+  margin-top: 0 !important;
+}
+
+.main-content-wrapper {
+  overflow-x: hidden;
+}
+.main-content-wrapper .contact-bg-left {
+  display: none;
+}
+.main-content-wrapper .contact-bg-middle {
+  margin: -3px 0 0 0;
+  border-radius: 0;
+  width: 100vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 h2 {
+  color: black;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 h2 i {
+  color: red;
+}
+.main-content-wrapper .contact-bg-right {
+  display: none;
+}/*# sourceMappingURL=contact.css.map */

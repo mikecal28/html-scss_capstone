@@ -11,11 +11,6 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/background-images/contact.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
 }
 
 a {
@@ -237,6 +232,7 @@ html .hero-body a {
 }
 .main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-1 .sub-container-footer a {
   font-size: 14px;
+  font-weight: 300;
   color: black !important;
 }
 .main-content-wrapper .bg-middle .main-item-2 .main-item-container .sub-container-1 a:not(.sub-heading) {
@@ -294,6 +290,55 @@ html .hero-body a {
 
 .hamburger-menu {
   display: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+textarea,
+.name {
+  width: 600px;
+  font-size: 12px;
+  background: transparent;
+  padding: 12px 0;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: gray;
+  margin-bottom: 50px;
+  border-bottom: 1px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.name {
+  height: 30px;
+}
+
+button {
+  background-color: rgb(231, 37, 101);
+  border: 1px;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.index-body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/background-images/contact.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 }
 
 .index-hero-wrapper {
@@ -393,7 +438,7 @@ html .hero-body a {
 .main-content-wrapper .bg-middle .main-item-3 h2 {
   color: white;
 }
-.main-content-wrapper .bg-middle .main-item-3 p {
+.main-content-wrapper .bg-middle .main-item-3 .info {
   margin-left: 30px;
 }
 .main-content-wrapper .bg-middle .main-item-3 i {
@@ -442,7 +487,7 @@ html .hero-body a {
   color: black !important;
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-4 a:not(.sub-heading) {
-  color: rgb(136, 41, 153);
+  color: rgb(255, 139, 37);
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-5 .sub-container-footer {
   color: black;
@@ -454,7 +499,7 @@ html .hero-body a {
   color: black !important;
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-5 a:not(.sub-heading) {
-  color: rgb(31, 188, 211);
+  color: rgb(229, 28, 88);
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-6 .sub-container-footer {
   font-size: 14px;
@@ -466,7 +511,7 @@ html .hero-body a {
   color: black !important;
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-6 a:not(.sub-heading) {
-  color: rgb(242, 69, 61);
+  color: rgb(68, 165, 70);
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-7 .sub-container-footer {
   font-size: 14px;
@@ -478,7 +523,85 @@ html .hero-body a {
   color: black !important;
 }
 .main-content-wrapper .bg-middle .main-item-2 .blog-main-item-container .sub-container-7 a:not(.sub-heading) {
-  color: rgb(242, 69, 61);
+  color: rgb(128, 36, 148);
+}
+
+.contact-hero-wrapper {
+  display: block !important;
+}
+.contact-hero-wrapper .google-maps {
+  margin-top: 70px;
+}
+.contact-hero-wrapper .contact-navbar-wrapper {
+  top: 0 !important;
+}
+.contact-hero-wrapper .contact-hero-body h1 {
+  color: white;
+  font-size: 42px;
+  margin-top: 0 !important;
+}
+
+.main-content-wrapper {
+  overflow-x: hidden;
+}
+.main-content-wrapper .contact-bg-left {
+  display: none;
+}
+.main-content-wrapper .contact-bg-middle {
+  margin: -3px 0 0 0;
+  border-radius: 0;
+  width: 100vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 {
+  color: black;
+  font-size: 14px;
+  padding: 90px 0;
+  display: grid !important;
+  grid-template-areas: "a a c" "a a d" "a a e";
+  gap: 30px;
+  margin: 0;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 h1 {
+  color: black;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 h2 {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 h2 i {
+  font-size: 24px;
+  color: rgb(231, 37, 101);
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 .item-1 {
+  grid-area: c;
+  margin-left: 2vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 .item-2 {
+  grid-area: d;
+  margin-left: 2vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 .item-3 {
+  grid-area: e;
+  margin-left: 2vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  grid-area: a;
+  white-space: nowrap;
+  width: 40vw;
+}
+.main-content-wrapper .contact-bg-middle .contact-main-item-3 form div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: -20px 0;
+}
+.main-content-wrapper .contact-bg-right {
+  display: none;
 }
 
 @media (max-width: 768px) {
