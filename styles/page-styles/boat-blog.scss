@@ -1,0 +1,229 @@
+.boat-blog-hero-body {
+  p {
+    margin-top: 20px;
+    font-size: 18px !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 100;
+  }
+}
+
+.sub-container-wrapper {
+  display: flex;
+
+  .sub-container-1 {
+    min-width: 435px !important;
+    .sub-container-footer {
+      .category-button {
+        background-color: $theme-red;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-left: 5px;
+      }
+      .tags-container {
+        margin-top: 20px;
+
+        a {
+          color: $theme-red !important;
+        }
+      }
+    }
+  }
+
+  .social-icons-wrapper {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .social-icons {
+      color: white;
+      font-size: 18px;
+
+      i {
+        padding: 15px;
+        border-radius: 50%;
+      }
+
+      .fa-facebook-f {
+        padding: 15px 20px;
+        background-color: $theme-facebook;
+      }
+
+      .fa-twitter {
+        background-color: $theme-twitter;
+      }
+
+      .fa-envelope {
+        background-color: $theme-email;
+      }
+    }
+  }
+}
+
+.related-posts-wrapper {
+  height: 600px;
+  background-color: $theme-off-white;
+  display: grid;
+  justify-content: center;
+  column-gap: 30px;
+  grid-template-areas:
+    "a a a"
+    "b c d";
+
+  .related-posts-header {
+    position: relative;
+    left: 106%;
+  }
+
+  .post-1 {
+    grid-area: b;
+    background-color: white;
+    width: 390px !important;
+    padding: 30px;
+    height: fit-content;
+    border-radius: 5px;
+  }
+
+  .post-2 {
+    grid-area: c;
+    background-color: white;
+    width: 390px !important;
+    padding: 30px;
+    height: fit-content;
+    border-radius: 5px;
+  }
+
+  .post-3 {
+    grid-area: d;
+    background-color: white;
+    width: 390px !important;
+    padding: 30px;
+    height: fit-content;
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: $theme-dark-red;
+  }
+
+  h2 {
+    color: $theme-dark-red;
+    font-size: 18px;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 14px;
+    color: $theme-pink;
+    line-height: 24px;
+  }
+
+  h1 {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .sub-heading {
+    color: $theme-dark-red;
+    font-weight: 700;
+    font-family: "Roboto Slab", serif;
+  }
+
+  .sub-container-1,
+  .sub-container-2,
+  .sub-container-3,
+  .sub-container-4,
+  .sub-container-5,
+  .sub-container-6,
+  .sub-container-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 390px;
+    max-width: 700px;
+    min-width: 150px;
+    text-align: left;
+    gap: 12px;
+
+    a:not(.sub-heading) {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  .sub-container-2 {
+    .sub-container-footer {
+      font-size: 14px;
+      font-weight: 100;
+      color: black;
+      a {
+        font-size: 14px;
+        color: black !important;
+      }
+    }
+    a:not(.sub-heading) {
+      color: $theme-color-2;
+    }
+  }
+
+  .sub-container-3 {
+    .sub-container-footer {
+      font-size: 14px;
+      font-weight: 100;
+      color: black;
+      a {
+        font-size: 14px;
+        color: black !important;
+      }
+    }
+    a:not(.sub-heading) {
+      color: $theme-color-3;
+    }
+  }
+
+  .sub-container-4 {
+    .sub-container-footer {
+      font-size: 14px;
+      font-weight: 100;
+      color: black;
+      a {
+        font-size: 14px;
+        color: black !important;
+      }
+    }
+    a:not(.sub-heading) {
+      color: $theme-link-4;
+    }
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+  background-color: $theme-footer-color;
+  gap: 30vw;
+
+  p {
+    color: lightgray;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10vw;
+    font-size: 12px;
+    font-weight: 100;
+    gap: 50px;
+    white-space: nowrap;
+  }
+}
