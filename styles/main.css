@@ -1283,4 +1283,15 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
     min-width: 93vw;
     max-height: 250px;
   }
+}
+@media (max-width: 1270px) {
+  .related-posts-wrapper .post-1 {
+    max-width: 220px !important;
+  }
+  .related-posts-wrapper .post-2 {
+    max-width: 220px !important;
+  }
+  .related-posts-wrapper .post-3 {
+    max-width: 220px !important;
+  }
 }/*# sourceMappingURL=main.css.map */
