@@ -1,8 +1,14 @@
+@-ms-viewport {
+  width: device-width;
+}
+
 * {
   padding: 0;
   margin: 0;
   min-width: 0;
   box-sizing: border-box;
+  touch-action: pan-y;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -11,14 +17,19 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
+  min-height: --webkit-fill-available;
 }
 
 a {
-  box-sizing: border-box;
   text-decoration: none;
-  color: white;
-  font-weight: 300;
-  transition: color 0.3s;
+
+  &:not(#read-more):not(.blog-sub-heading) {
+    box-sizing: border-box;
+    color: white;
+    font-weight: 300;
+    transition: color 0.3s;
+  }
 }
 
 @mixin flex-default($spacing: space-around) {
@@ -28,6 +39,7 @@ a {
 }
 
 html {
+  height: --webkit-fill-available;
   &:not([data-scroll="0"]) {
     .navbar-wrapper {
       background-color: white;
@@ -35,22 +47,22 @@ html {
       box-shadow: 0 6px 6px -6px gray;
 
       .nav-right {
-        a:not(.nav-special) {
+        a:not(.nav-special):not(#read-more) {
           color: $theme-link-color-2;
 
           &:hover {
-            color: rgba(95, 95, 95, 0.8);
+            color: $theme-red !important;
             background-color: transparent;
           }
         }
       }
 
       .nav-left {
-        a {
-          color: $theme-link-color-1;
+        a:not(#read-more) {
+          color: black !important;
 
           &:hover {
-            color: rgba(95, 95, 95, 0.8);
+            color: $theme-red !important;
             background-color: transparent;
           }
         }
@@ -81,7 +93,7 @@ html {
         font-size: 18px;
         margin: 0 10px;
 
-        a {
+        a:not(#read-more) {
           font-family: "Roboto", sans-serif;
           font-weight: 300;
           text-decoration-style: none;
@@ -91,7 +103,7 @@ html {
       .nav-right {
         @include flex-default(center);
 
-        a:not(.nav-special) {
+        a:not(.nav-special):not(#read-more) {
           @include flex-default(space-around);
           box-sizing: border-box;
           flex-basis: 100%;
@@ -116,6 +128,7 @@ html {
 
         .nav-special {
           background-color: $theme-red;
+          color: white;
           padding: 18px 55px 18px 25px;
           border-radius: 25px;
           margin: 0 10px;
@@ -146,7 +159,7 @@ html {
       color: white;
     }
 
-    a:not(.author-link) {
+    a:not(.author-link):not(#read-more) {
       @include flex-default();
       width: 120px;
       height: 45px;
@@ -214,7 +227,7 @@ html {
       }
 
       .sub-heading {
-        color: $theme-dark-red;
+        color: $theme-dark-red !important;
         font-weight: 700;
         font-family: "Roboto Slab", serif;
       }
@@ -242,7 +255,7 @@ html {
           text-align: left;
           gap: 12px;
 
-          a:not(.sub-heading) {
+          a:not(.sub-heading):not(#read-more) {
             font-size: 12px;
             font-weight: 500;
           }
@@ -253,13 +266,13 @@ html {
             font-size: 14px;
             font-weight: 100;
             color: black;
-            a:not(.tag-link) {
+            a:not(.tag-link):not(#read-more) {
               font-size: 14px;
               font-weight: 300;
               color: black !important;
             }
           }
-          a:not(.sub-heading) {
+          a:not(.sub-heading):not(#read-more) {
             color: $theme-color-1;
           }
         }
@@ -269,12 +282,12 @@ html {
             font-size: 14px;
             font-weight: 100;
             color: black;
-            a {
+            a:not(#read-more) {
               font-size: 14px;
               color: black !important;
             }
           }
-          a:not(.sub-heading) {
+          a:not(.sub-heading):not(#read-more) {
             color: $theme-color-2;
           }
         }
@@ -284,12 +297,12 @@ html {
             font-size: 14px;
             font-weight: 100;
             color: black;
-            a {
+            a:not(#read-more) {
               font-size: 14px;
               color: black !important;
             }
           }
-          a:not(.sub-heading) {
+          a:not(.sub-heading):not(#read-more) {
             color: $theme-color-3;
           }
         }
@@ -395,10 +408,12 @@ button:hover {
   width: [object Object]px;
   height: [object Object]px;
   background: #f8f8f8;
-  border: solid #bdbdbd 0;
-  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  -moz-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .category-button-font-color {

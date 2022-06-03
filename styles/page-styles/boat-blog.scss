@@ -22,7 +22,7 @@
       .tags-container {
         margin-top: 20px;
 
-        a {
+        a:not(#read-more) {
           color: $theme-red !important;
         }
       }
@@ -61,7 +61,7 @@
 }
 
 .related-posts-wrapper {
-  height: 600px;
+  min-height: 600px;
   background-color: $theme-off-white;
   display: grid;
   justify-content: center;
@@ -132,6 +132,7 @@
     color: $theme-dark-red;
     font-weight: 700;
     font-family: "Roboto Slab", serif;
+    font-size: 18px;
   }
 
   .sub-container-1,
@@ -151,53 +152,62 @@
     text-align: left;
     gap: 12px;
 
-    a:not(.sub-heading) {
+    a:not(.sub-heading):not(#read-more) {
       font-size: 12px;
       font-weight: 500;
     }
   }
 
   .sub-container-2 {
+    #read-more {
+      color: $theme-read-more;
+    }
     .sub-container-footer {
       font-size: 14px;
       font-weight: 100;
       color: black;
-      a {
+      a:not(#read-more) {
         font-size: 14px;
         color: black !important;
       }
     }
-    a:not(.sub-heading) {
+    a:not(.sub-heading):not(#read-more) {
       color: $theme-color-2;
     }
   }
 
   .sub-container-3 {
+    #read-more {
+      color: $theme-read-more;
+    }
     .sub-container-footer {
       font-size: 14px;
       font-weight: 100;
       color: black;
-      a {
+      a:not(#read-more) {
         font-size: 14px;
         color: black !important;
       }
     }
-    a:not(.sub-heading) {
+    a:not(.sub-heading):not(#read-more) {
       color: $theme-color-3;
     }
   }
 
   .sub-container-4 {
+    #read-more {
+      color: $theme-read-more;
+    }
     .sub-container-footer {
       font-size: 14px;
       font-weight: 100;
       color: black;
-      a {
+      a:not(#read-more) {
         font-size: 14px;
         color: black !important;
       }
     }
-    a:not(.sub-heading) {
+    a:not(.sub-heading):not(#read-more) {
       color: $theme-link-4;
     }
   }

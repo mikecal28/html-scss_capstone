@@ -21,7 +21,15 @@ These will probably come naturally based on that layout anyways. Don't just limi
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=width, height=height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +57,7 @@ These will probably come naturally based on that layout anyways. Don't just limi
           <a href="#">HOME</a>
           <a href="./pages/blog.html">BLOG</a>
           <a href="./pages/contact.html">CONTACT</a>
-          <a class="nav-special" href="#">MORE</a>
+          <a class="nav-special" href="#more-info">MORE</a>
         </div>
         <div class="hamburger-menu" tabindex="0">
           <i class="fa-solid fa-bars" tabindex="1"></i>
@@ -58,16 +66,17 @@ These will probably come naturally based on that layout anyways. Don't just limi
             <a href="#">HOME</a>
             <a href="./pages/blog.html">BLOG</a>
             <a href="./pages/contact.html">CONTACT</a>
-            <a class="nav-special" href="#">MORE</a>
+            <a class="nav-special" href="#more-info">MORE</a>
           </div>
         </div>
       </div>
       <div class="index-hero-body hero-body">
         <h1>Welcome to Hestia!</h1>
         <p>Lorem ipsum dolor sit amet</p>
-        <a href="#">SEE MORE</a>
+        <a href="#more-info">SEE MORE</a>
       </div>
     </div>
+    <a id="more-info"></a>
     <div class="main-content-wrapper">
       <div class="bg-left"></div>
       <div class="css-box-shadow index-bg-middle bg-middle">

@@ -47,6 +47,7 @@
       padding-bottom: 22.5%;
       display: grid !important;
       margin-right: 10vw;
+      column-gap: 80px;
       grid-template-areas:
         "a a c"
         "a a d"
@@ -112,7 +113,6 @@
         width: 40vw;
         min-width: fit-content;
         max-width: 700px;
-        margin-right: 2vw;
         margin-left: 5vw;
 
         div {
