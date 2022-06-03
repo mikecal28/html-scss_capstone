@@ -1294,4 +1294,18 @@ html:not([data-scroll="0"]) .navbar-wrapper .nav-left a {
   .related-posts-wrapper .post-3 {
     max-width: 220px !important;
   }
+}
+@media (max-width: 968px) {
+  .sub-container-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 50px;
+  }
+  .sub-container-wrapper figure img {
+    max-width: 92vw;
+  }
+  .sub-container-wrapper .social-icons-wrapper {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }/*# sourceMappingURL=main.css.map */
